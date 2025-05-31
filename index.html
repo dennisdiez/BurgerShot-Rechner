@@ -3,6 +3,25 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+
+  echo "<script type='text/javascript'>
+   function click (e) {
+   if (!e)
+    e = window.event;
+    if ((e.type && e.type == 'contextmenu')) {
+    if (window.opera)
+      window.alert('Sorry: Diese Funktion ist deaktiviert.');
+      alert('Gibt nix zu Klauen hier,habt ihr keine eigenen Ideen ?!');
+    return false;
+  }
+}
+if (document.layers)
+  document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown = click;
+document.oncontextmenu = click;
+</script>";
+
+  
   <title>BurgerShot Preisrechner 2025</title>
   <style>
     * {
